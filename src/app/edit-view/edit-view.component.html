@@ -1,0 +1,63 @@
+<div fxLayout fxLayoutAlign="center center"
+     class="container">
+  <div class="form-wrapper">
+    <form [formGroup]="editViewForm">
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter Page Color Hex Value</mat-label>
+        <input matInput [formControl]="color">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter Number of Tweets Per Column</mat-label>
+        <input matInput [formControl]="number" type="number">
+      </mat-form-field>
+
+      <div fxLayout="row wrap"
+           fxLayout.lt-md="column"
+           fxLayoutGap="5px"
+           fxLayoutAlign="flex-start">
+
+        <div fxFlex="0 1 calc(33.3% - 5px)"
+             fxFlex.lt-sm="100%">
+          <mat-form-field class="example-full-width">
+            <mat-select placeholder="First" [formControl]="first" appearance="outline">
+              <mat-option value="makeschool" seleced>@makeschool</mat-option>
+              <mat-option value="newsycombinator">@newsycombinator</mat-option>
+              <mat-option value="ycombinator">@ycombinator</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="0 1 calc(33.3% - 5px)"
+             fxFlex.lt-md="100%">
+          <mat-form-field class="example-full-width">
+            <mat-select placeholder="Second" [formControl]="second" appearance="outline">
+              <mat-option value="makeschool">@makeschool</mat-option>
+              <mat-option value="newsycombinator" selected>@newsycombinator</mat-option>
+              <mat-option value="ycombinator">@ycombinator</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="0 1 calc(33.3% - 5px)"
+             fxFlex.lt-sm="100%">
+          <mat-form-field class="example-full-width">
+            <mat-select placeholder="Third" [formControl]="third" appearance="outline">
+              <mat-option value="makeschool">@makeschool</mat-option>
+              <mat-option value="newsycombinator">@newsycombinator</mat-option>
+              <mat-option value="ycombinator" selected>@ycombinator</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="buttons-w">
+        <button mat-raised-button color="primary" (click)="onSubmit()">Save</button>
+        <button id="cancel-button"mat-raised-button color="warn" routerLink="/tweets">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</div>

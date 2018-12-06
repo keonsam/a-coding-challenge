@@ -1,0 +1,21 @@
+<div class="wrapper"  [ngStyle]="{'background-color': editView ? editView.color : '#f5f5f5'}">
+  <div   fxLayout="row wrap"
+         fxLayout.lt-md="column"
+         fxLayoutGap="10px"
+         class="tabs"
+         fxLayoutAlign="space-between">
+      <div *ngFor="let data of domData; let i = index"
+        class="tab"
+        fxFlex="0 1 calc(33.3% - 10px)"
+        fxFlex.lt-md="100%"
+      >
+        <mat-toolbar class="toolbar" color="primary">
+          <button *ngIf="i === 0" mat-raised-button color="accent" routerLink="/edit-view">Change View</button>
+          <span class="center">{{ '@'+data.name }}</span>
+        </mat-toolbar>
+        <ul >
+          <li *ngFor="let item of data.data"><span class="date">{{ item.created_at | date : 'medium'}}</span><span class="tweet">{{ item.text }}</span></li>
+        </ul>
+      </div>
+  </div>
+</div>
