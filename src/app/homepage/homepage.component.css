@@ -25,13 +25,13 @@
 }
 
 .date {
-  margin-right: 8px;
-  padding-right: 7px;
-  border-right: 1px solid #000000;;
+  font-size: 10px;
+  text-align: right;
 }
 
 .tweet {
-  margin-right: 15px;
+  /*margin-right: 15px;*/
+  /*display: inline-block;*/
 }
 
 li:not(:last-child) {
@@ -40,8 +40,23 @@ li:not(:last-child) {
   margin-bottom: 20px;
 }
 
+li:hover {
+  color: #3f51b5;
+}
+
 ul {
   list-style-type: none;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+i {
+  color: #3f51b5;
+}
+
+

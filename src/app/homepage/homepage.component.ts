@@ -23,6 +23,7 @@ export class HomepageComponent implements OnInit {
   getTweets(editView: EditView) {
     this.twitter.getTweets(editView)
       .subscribe( data => {
+        console.log(data);
         this.domData = data;
       });
   }

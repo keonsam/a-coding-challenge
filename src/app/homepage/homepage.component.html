@@ -14,7 +14,16 @@
           <span class="center">{{ '@'+data.name }}</span>
         </mat-toolbar>
         <ul >
-          <li *ngFor="let item of data.data"><span class="date">{{ item.created_at | date : 'medium'}}</span><span class="tweet">{{ item.text }}</span></li>
+          <li *ngFor="let item of data.data">
+            <a [href]="item.link" target="_blank"
+               fxLayout="row"
+               fxLayoutAlign="space-between"
+               fxLayoutGap="5px">
+              <div><i class="fa fa-twitter" aria-hidden="true"></i></div>
+              <div class="tweet">{{ item.text }}</div>
+              <div class="date">{{ item.created_at}}</div>
+            </a>
+          </li>
         </ul>
       </div>
   </div>

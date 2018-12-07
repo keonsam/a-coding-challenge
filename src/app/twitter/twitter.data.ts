@@ -1,5 +1,5 @@
 export interface TwitterData {
   created_at: string,
-  source: string,
+  link: string,
   text: string
 }

@@ -29,6 +29,7 @@
     "express": "^4.16.4",
     "hammerjs": "^2.0.8",
     "http-server": "^0.11.1",
+    "moment": "^2.22.2",
     "rxjs": "~6.3.3",
     "twit": "^2.2.11",
     "twitter-proxy": "^2.0.0",
